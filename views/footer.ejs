@@ -1,0 +1,50 @@
+<footer class="page-footer font-small  " >
+   <div class="footer-copyright text-center py-3">By Czyum</div>
+</footer>
+<script>(function(document) {
+      'use strict';
+  
+      var LightTableFilter = (function(Arr) {
+  
+          var _input;
+  
+          function _onInputEvent(e) {
+              _input = e.target;
+              var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+              Arr.forEach.call(tables, function(table) {
+                  Arr.forEach.call(table.tBodies, function(tbody) {
+                      Arr.forEach.call(tbody.rows, _filter);
+                  });
+              });
+          }
+  
+          function _filter(row) {
+              var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+              row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+          }
+  
+          return {
+              init: function() {
+                  var inputs = document.getElementsByClassName('light-table-filter');
+                  Arr.forEach.call(inputs, function(input) {
+                      input.oninput = _onInputEvent;
+                  });
+              }
+          };
+      })(Array.prototype);
+  
+      document.addEventListener('readystatechange', function() {
+          if (document.readyState === 'complete') {
+              LightTableFilter.init();
+          }
+      });
+  
+  })(document);</script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

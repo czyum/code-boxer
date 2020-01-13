@@ -1,0 +1,70 @@
+<%-include("header.ejs")-%>
+        <div  id="inventory" class="container " style="background-color: azure;" >
+                <section class="jumbotron text-center">
+                        <div class="container">
+                            <h1 class="jumbotron-heading">CARD NUMBER - <%=consumer%>    <strong><%=issue%></strong> </h1>
+                           
+                           
+                        </div>
+                    </section>
+                    <form action="/admin/consumer/details/inventory/finish" method="POST">
+                      
+                <dl class="dl-horizontal">
+                    <table class="table table-striped" >
+                        
+                            <thead>
+                                    <tr>
+                                      <th style="width: 50px;" scope="col">#</th>
+                                      <th scope="col">Item</th>
+                                      <th scope="col">Quantity</th>
+                                      <th scope="col">Price</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th style="width: 50px;" scope="row">1</th>
+                                      <td>Rice</td>
+                                      <td><h4><%=rice%></h4></td>
+                                      <td><h4><%=rice_price%></h4></td>
+                                    </tr>
+                                    <tr>
+                                      <th style="width: 50px;" scope="row">2</th>
+                                      <td>Wheat</td>
+                                      <td><h4><%=wheat%></h4</td>
+                                      <td><h4><%=wheat_price%></h4></td>
+                                    </tr>
+                                    <tr>
+                                      <th style="width: 50px;" scope="row">3</th>
+                                      <td>Ragi</td>
+                                      <td><h4><%=ragi%></h4</td>
+                                      <td><h4><%=ragi_price%></h4</td>
+                                    </tr>
+                                    <tr>
+                                            <th style="width: 50px;" scope="row">4</th>
+                                            <td>Sugar</td>
+                                            <td><h4><%=sugar%></h4</td>
+                                            <td><h4><%=sugar_price%></h4</td>
+                                          </tr>
+                                    <tr>
+                                        <th style="width: 50px;" scope="row">5</th>
+                                        <td>Oil</td>
+                                        <td><h4><%=oil%></h4</td>
+                                        <td><h4><%=oil_price%></h4</td>
+                                        </tr>
+                                        <tr>
+                                          <th style="width: 50px;" scope="row"></th>
+                                          <td>Total</td>
+                                          <td></td>
+                                          <td><h4><%=total%></h4></td>
+                                        </tr>
+                                  </tbody>
+                                </table>
+                       
+                </table>
+                <div class="form-group">
+                        <input type="submit" value="Finish" class="btn login_btn ">
+                    </div>
+                </form>
+
+            </div>
+            <%-include("footer.ejs")-%>

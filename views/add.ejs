@@ -1,0 +1,38 @@
+<%-include("header.ejs")-%>
+        <div  id="inventory" class="container " style="background-color: azure;" >
+                <section class="jumbotron text-center">
+                        <div class=" jumbo-head container">
+                            <h1 class="jumbotron-heading">Add Consumer</h1>
+                           
+                        </div>
+                    </section>
+                    <form action="/admin/add" method="POST">
+                <dl class="dl-horizontal">
+                    <table class="table table-striped" >
+                        <tbody>
+                            <tr>
+                              <th>Ration Card Number</th>
+                              <td ><input class="add" name="card_no" type="text" placeholder="Card number"></td>
+                        </tr>
+                        <tr>
+                                <th>Consumer name</th>
+                                <td><input class="add" name="name" type="text " placeholder="Name"></td>
+                          </tr>
+                          <tr id="address">
+                                <th>Consumer Address</th>
+                                <td ><textarea class="add" name="address" id="" cols="30" rows="5"></textarea>  </td>
+                          </tr>
+                          
+                          
+                          
+
+                    </tbody>
+                </table>
+                <div class="form-group">
+                        <input type="submit" value="Register" class="btn consumer float-right login_btn">
+                    </div>
+                </form>
+
+            </div>
+ <%-include("footer.ejs")-%>
+    
