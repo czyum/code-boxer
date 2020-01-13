@@ -10,9 +10,12 @@ A gist about the project
 
 Prerequisites
 ------------------
--node.js
--xampp
--Suitable editor(vs code)
+node.js
+
+xampp
+
+Suitable editor(vs code)
+
 
 
 Author
